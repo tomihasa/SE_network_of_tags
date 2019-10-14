@@ -4,7 +4,7 @@ GexfJS.setParams({
     graphFile : "so_10000.gexf",
     graphFile : "so_10000.gexf",
     graphFile : "so_10000.gexf",
-    graphFile : "so_10000.gexf",
+    graphFile : "celegans.gexf",
         /*
             The GEXF file to show ! -- can be overriden by adding
             a hash to the document location, e.g. index.html#celegans.gexf
