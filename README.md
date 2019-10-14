@@ -1,37 +1,104 @@
-## Welcome to GitHub Pages
+# JavaScript GEXF Viewer for Gephi #
 
-You can use the [editor on GitHub](https://github.com/TxSI/SE_network_of_tags/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+#### Released under MIT License ###
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Known Issues
 
-### Markdown
+**The issue below is the source of 90% of support emails I receive, please read carefully**
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Gexf-JS won't work on chrome if launched from your local drive (with a file:/// URI scheme).
+This is a known security limitation, and there are 2 known workarounds:
 
-```markdown
-Syntax highlighted code block
+1. Use Firefox.
+2. Use a server (upload it or use a local server). If you have Python on your computer, the simplest is to launch a SimpleHTTPServer with the Command Line:
 
-# Header 1
-## Header 2
-### Header 3
+    $ cd /path/to/gexf-js
+    $ python -m SimpleHTTPServer
 
-- Bulleted
-- List
+There used to a third workaround (The --allow-file-access-from-files flag), but it is no longer available on newest Chrome versions since 2014.
 
-1. Numbered
-2. List
+### Newest features
 
-**Bold** and _Italic_ and `Code` text
+Hybrid directed/undirected graphs are now supported, and arrows can be shown.
 
-[Link](url) and ![Image](src)
-```
+Gexf-JS now speaks 9 languages: Dutch, English, French, Finnish, German, Greek, Italian, Spanish, and Turkish!
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Contributors
 
-### Jekyll Themes
+#### Raphaël Velt (main developer, French and English versions)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/TxSI/SE_network_of_tags/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+* http://raphaelve.lt/
+* Twitter: [@raphv](http://twitter.com/raphv)
 
-### Support or Contact
+#### Vicenzo Cosenza (Italian translation)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+* http://www.vincos.it/
+* Twitter: [@vincos](http://twitter.com/vincos)
+
+#### Eduardo Ramos Ibáñez (Spanish translation)
+
+* https://github.com/eduramiba
+* Twitter: [@eduramiba](http://twitter.com/eduramiba)
+
+#### Jaakko Salonen (Finnish translation and hyperlink replacement)
+
+* https://github.com/jsalonen
+* Twitter: [@jsalonen](http://twitter.com/jsalonen)
+
+#### Zeynep Akata (Turkish translation)
+
+#### Σωτήρης Φραγκίσκος (Greek translation)
+
+#### Martin Eckert (German translation)
+
+#### Tobias Bora (Arrows and hybrid graphs)
+
+* https://github.com/tobiasBora
+
+#### Jan de Mooij (Dutch translation and touch-screen compatibility)
+
+* https://github.com/Ilsontfous
+
+#### Bruna Delzari (Portuguese translation)
+
+#### Adil Aliyev (Azerbaijani translation)
+* https://github.com/adilek
+* Twitter: [@adilaliyev](http://twitter.com/adilaliyev)
+
+### How to use ?
+
+1. Export your graph from Gephi as a GEXF file
+2. Put it in the gexf-js directory
+3. Modify config.js to point to your GEXF File and tune the interface.
+
+You can view more Gexf files by pointing your browser to index.html#Filename.gexf
+
+### Compatibility
+
+Gexf-JS uses the canvas element, which might cause compatibility issues with older browsers.
+
+It has been tested with the latest Chrome, Firefox and Internet Explorer versions.
+
+It doesn't work with Internet Explorer 8 or older.
+
+### Contribute as a translator
+
+Gexf JS Viewer is now available in English, French and Italian
+
+If you want to translate the interface in your language (and share this translation with the community), please translate the following sentences, send them to me and I'll upload them to github.
+
+Strings to translate:
+
+1. Search nodes
+2. Attributes
+3. Nodes
+4. Inbound Links from
+5. Outbound Links to
+6. Undirected links with
+7. Activate lens mode
+8. Deactivate lens mode
+9. Show edges
+1. Hide edges
+1. Zoom In
+1. Zoom Out
+1. Your browser cannot properly display this page. We recommend you use the latest Firefox or Chrome version
