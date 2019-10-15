@@ -3,7 +3,7 @@
 GexfJS.setParams({
     graphFile : "ICTags_40_1000_65402n_176465e.gexf",
     graphFile : "ICTags_50_500_65402n_134884e.gexf",
-    graphFile : "ICTags_50_100_65402n_71260e.gexf",
+//     graphFile : "ICTags_50_100_65402n_71260e.gexf",
 //     graphFile : "so_10000.gexf",
         /*
             The GEXF file to show ! -- can be overriden by adding
